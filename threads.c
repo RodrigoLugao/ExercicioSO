@@ -17,16 +17,20 @@
 	int x = 1;
 	int entr = 1;
 	int resultado;
+	printf("Uma thread printa constantemente o ultimo numero digitado(começando por 1) \nenquanto a outra aguarda o usuario digitar um numero\nPressione enter para continuar:\n");
+	resultado = scanf("", &entr);
+		if (resultado == 0) {
+			while (fgetc(stdin) != '\n');
+			entr = 0;
+		}
+	entr = 1;
 	if(pthread_create(&minha_thread, NULL, escreve, &x)) {
 
 		fprintf(stderr, "Erro ao criar a thread\n");
 		return 1;
 
 	}
-	printf("Uma thread printa constantemente o ultimo numero digitado(começando por 1) \n
-	       enquanto a outra aguarda o usuario digitar um numero\n
-	       Pressione enter para continuar:\n");
-	scanf("");
+	
     while(entr > 0){
 		resultado = scanf("%d", &entr);
 		x = entr;
