@@ -23,6 +23,10 @@
 		return 1;
 
 	}
+	printf("Uma thread printa constantemente o ultimo numero digitado(começando por 1) \n
+	       enquanto a outra aguarda o usuario digitar um numero\n
+	       Pressione enter para continuar:\n");
+	scanf("");
     while(entr > 0){
 		resultado = scanf("%d", &entr);
 		x = entr;
