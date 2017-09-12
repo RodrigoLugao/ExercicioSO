@@ -1,2 +1,2 @@
-# ExercicioSO
-Exercício com pthreads e fork
+# ExercícioSO
+Exercício com pthreads e fork da disciplina Sistemas Operacionais
